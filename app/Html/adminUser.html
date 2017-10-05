@@ -1,0 +1,185 @@
+    <div class="brand">Recopilacion de Restaurantes?</div>
+    <div class="address-bar">Ubicacion de donde es el mapa que trabajamos</div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                <a class="navbar-brand" href="index.html">Business Casual</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#/index.html">Inicio</a>
+                    </li>
+                    <li ng-show="isAdmin">
+                        <a href="#/adminingr">Ingredientes</a>
+                    </li>
+                    <li ng-show="isAdmin">
+                        <a href="#/adminfactura">Facturas</a>
+                    </li>
+                    <li ng-show="isAdmin">
+                        <a href="#/adminuser">Usuarios</a>
+                    </li>
+                    <li ng-show="isAdmin">
+                        <a href="#/adminconsultas">Consultas</a>
+                    </li>
+                    <li ng-show="islogin">
+                        <a href="#/logout">Log out</a>
+                    </li>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">
+                        <strong>Agregar</strong>
+                    </h2>
+                    <hr>
+                    <p>Por favor brinde la siguiente informacion en los campos especificados para poder
+                        agregar, modificar o eliminar un cliente</p>
+                    <form role="form">
+                        <div class="row">
+                            <div class="form-group col-lg-4">
+                                    <div class="form-group row-lg-4" style="margin-bottom: 25px">
+                                        <label>Nombre</label>
+                                    </div>
+                                    <div class="form-group row-lg-4" style="margin-bottom: 25px">
+                                        <label>Numero Telefonico</label>
+                                    </div>
+                                    <div class="form-group row-lg-4" style="margin-bottom: 25px">
+                                        <label>Correo Electronico</label>
+                                    </div>
+                                    <div class="form-group row-lg-4" style="margin-bottom: 25px">
+                                        <label>Contraseña</label>
+                                    </div>
+                                    <div class="form-group row-lg-4" style="margin-bottom: 25px">
+                                        <label>Confirmar Contraseña</label>
+                                    </div>
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <div class="form-group row-lg-4">
+                                    <input type="text" class="form-control" ng-model="nombre">
+                                </div>
+                                <div class="form-group row-lg-4">
+                                    <input type="text" class="form-control" ng-model="telefono">
+                                </div>
+                                <div class="form-group row-lg-4">
+                                    <input type="text" class="form-control" ng-model="correo">
+                                </div>
+                                <div class="form-group row-lg-4">
+                                    <input type="text" class="form-control" ng-model="contrasena">
+                                </div>
+                                <div class="form-group row-lg-4">
+                                    <input type="text" class="form-control" ng-model="confcontrasena">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row-lg-12">
+                                <button type="submit" class="btn btn-default" ng-click="addUser()">Registrar usuario</button>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">
+                        <strong>Modificar cliente</strong>
+                    </h2>
+                    <hr>
+                    <p>Es posible modificar todos los valores menos el correo, por favor ingresar el correo y los valores que se deseen cambiar</p>
+                    <form role="form">
+                        <div class="row">
+                            <div class="form-group col-lg-4">
+                                    <div class="form-group row-lg-50" style="margin-bottom: 25px">
+                                        <label>Nombre</label>
+                                    </div>
+                                    <div class="form-group row-lg-50" style="margin-bottom: 25px">
+                                        <label>Numero Telefonico</label>
+                                    </div>
+                                    <div class="form-group row-lg-50" style="margin-bottom: 25px">
+                                        <label>Correo Electronico</label>
+                                    </div>
+                                    <div class="form-group row-lg-50" style="margin-bottom: 25px">
+                                        <label>Contraseña</label>
+                                    </div>
+                                    <div class="form-group row-lg-50" style="margin-bottom: 25px">
+                                        <label>Confirmar Contraseña</label>
+                                    </div>
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <div class="form-group row-lg-4">
+                                    <input type="text" class="form-control" ng-model="nombreC">
+                                </div>
+                                <div class="form-group row-lg-4">
+                                    <input type="text" class="form-control" ng-model="telefonoC">
+                                </div>
+                                <div class="form-group row-lg-4">
+                                    <input type="text" class="form-control" ng-model="correoC">
+                                </div>
+                                <div class="form-group row-lg-4">
+                                    <input type="text" class="form-control" ng-model="contrasenaC">
+                                </div>
+                                <div class="form-group row-lg-4">
+                                    <input type="text" class="form-control" ng-model="confcontrasenaC">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row-lg-12">
+                                <input type="hidden" name="save" value="contact">
+                                <button type="submit" class="btn btn-default" ng-click="updateinfo()">Realizar Cambios</button>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">
+                        <strong>Consultar clientes</strong>
+                    </h2>
+                    <hr>
+                    <p>Ingrese el correo de un cliente para consultar su informacion</p>
+                    <form role="form">
+                        <div class="row">
+                            <div class="form-group col-lg-50" style="margin-top: 25px">
+                                        <label>Correo del cliente</label>
+                                    </div>
+                                    <div class="form-group col-lg-4">
+                                        <input type="text" class="form-control" ng-model= "correoCon">
+                                    </div>
+                        </div>
+                        <div class="form-group row-lg-4">
+                              <button type="submit" class="btn btn-default" ng-click="consultClient()">Realizar Consulta</button>
+                        </div>
+                        <div class="form-group row-lg-50" style="margin-bottom: 25px">
+                              <label>{{info}}</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

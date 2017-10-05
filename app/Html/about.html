@@ -1,0 +1,108 @@
+    <div class="brand">Recopilacion de Restaurantes?</div>
+    <div class="address-bar">Ubicacion de donde es el mapa que trabajamos</div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                <a class="navbar-brand" href="index.html">Business Casual</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#/index">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#/register">Registrarse</a>
+                    </li>
+                    <li>
+                        <a href="#/login">Ingresar</a>
+                    </li>
+                     <li>
+                        <a href="#/about">Información Personal</a>
+                    </li>
+                    <li ng-show="islogin">
+                        <a href="#/logout">Log out</a>
+                    </li>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">
+                        <strong>Informacion personal</strong>
+                    </h2>
+                    <hr>
+                    <p>Los campos brindados son la informacion personal que es posible modificar, en caso de querer modificar un valor basta con borrar este en el espacio provisto, asignarle uno nuevo y presionar el boton "Realizar Cambios"</p>
+                    <form role="form">
+                        <div class="row">
+                            <div class="form-group col-lg-4">
+                                    <div class="form-group row-lg-50" style="margin-bottom: 25px">
+                                        <label>Nombre</label>
+                                    </div>
+                                    <div class="form-group row-lg-50" style="margin-bottom: 25px">
+                                        <label>Numero Telefonico</label>
+                                    </div>
+                                    <div class="form-group row-lg-50" style="margin-bottom: 25px">
+                                        <label>Correo Electronico</label>
+                                    </div>
+                                    <div class="form-group row-lg-50" style="margin-bottom: 25px">
+                                        <label>Contraseña</label>
+                                    </div>
+                                    <div class="form-group row-lg-50" style="margin-bottom: 25px">
+                                        <label>Confirmar Contraseña</label>
+                                    </div>
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <div class="form-group row-lg-4">
+                                    <input type="text" class="form-control" ng-model="nombre">
+                                </div>
+                                <div class="form-group row-lg-4">
+                                    <input type="text" class="form-control" ng-model="telefono">
+                                </div>
+                                <div class="form-group row-lg-4">
+                                    <label>{{correoLogged}}</label>
+                                </div>
+                                <div class="form-group row-lg-4">
+                                    <input type="text" class="form-control" ng-model="contrasena">
+                                </div>
+                                <div class="form-group row-lg-4">
+                                    <input type="text" class="form-control" ng-model="confcontrasena">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row-lg-12">
+                                <input type="hidden" name="save" value="contact">
+                                <button type="submit" class="btn btn-default" ng-click="updateinfo()">Realizar Cambios</button>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; Adrian Lopez, 2014</p>
+                </div>
+            </div>
+        </div>
+    </footer>
